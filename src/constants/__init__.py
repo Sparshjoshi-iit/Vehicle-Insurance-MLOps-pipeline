@@ -11,8 +11,9 @@ ARTIFACT_DIR: str = "artifact"
 
 MODEL_FILE_NAME = "model.pkl"
 
-TARGET_COLUMN = "Response"
-CURRENT_YEAR = date.today().year
+TARGET_COLUMN = "Cost_claims_year"
+CURRENT_YEAR = 2020
+CURRENT_DATE='2020-01-01'
 PREPROCSSING_OBJECT_FILE_NAME = "preprocessing.pkl"
 
 FILE_NAME: str = "data.csv"

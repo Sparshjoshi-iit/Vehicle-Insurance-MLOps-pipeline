@@ -1,5 +1,4 @@
 numerical_columns:
-  - ID
   - Seniority
   - Policies_in_force
   - Max_policies
@@ -25,13 +24,8 @@ float_columns:
   - Length
 
 categorical_columns:
-  - Date_start_contract
-  - Date_last_renewal
-  - Date_next_renewal
-  - Date_birth
   - Date_driving_licence
   - Distribution_channel
-  - Date_lapse
   - Type_fuel
 
 columns:
@@ -65,3 +59,22 @@ columns:
   - Type_fuel
   - Length
   - Weight
+
+power_transformed_features:
+  - Seniority
+  - Policies_in_force
+  - Max_policies
+  - Max_products
+  - Lapse
+  - Payment
+  - Premium
+  - N_claims_year
+  - N_claims_history
+  - Area
+  - Second_driver
+  - Value_vehicle
+  - Length
+  - Weight
+
+drop_columns:
+  - ID

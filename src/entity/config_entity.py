@@ -35,6 +35,26 @@ class DataTransformationConfig:
                                                     TRAIN_FILE_NAME.replace("csv", "npy"))
     transformed_test_file_path: str = os.path.join(data_transformation_dir, DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,
                                                    TEST_FILE_NAME.replace("csv", "npy"))
+    transformed_train_file_path2: str = os.path.join(data_transformation_dir, DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,
+                                                    TRAIN_FILE_NAME2.replace("csv", "npy"))
+    transformed_test_file_path2: str = os.path.join(data_transformation_dir, DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,
+                                                   TEST_FILE_NAME2.replace("csv", "npy"))
     transformed_object_file_path: str = os.path.join(data_transformation_dir,
                                                      DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,
                                                      PREPROCSSING_OBJECT_FILE_NAME)
+    
+@dataclass
+class ModelTrainerConfig:
+    model_trainer_dir: str = os.path.join(training_pipeline_config.artifact_dir, MODEL_TRAINER_DIR_NAME)
+    trained_model1_file_path: str = os.path.join(model_trainer_dir, MODEL_TRAINER_TRAINED_MODEL_DIR,'model1', MODEL_FILE_NAME)
+    trained_model2_file_path: str = os.path.join(model_trainer_dir, MODEL_TRAINER_TRAINED_MODEL_DIR,'model2', MODEL_FILE_NAME)
+    trained_model3_file_path: str = os.path.join(model_trainer_dir, MODEL_TRAINER_TRAINED_MODEL_DIR,'model3', MODEL_FILE_NAME)
+    model_config_file_path: str = MODEL_TRAINER_MODEL_CONFIG_FILE_PATH
+    _n_estimators = MODEL_TRAINER_N_ESTIMATORS
+    _max_depth = MIN_SAMPLES_SPLIT_MAX_DEPTH
+    _learning_rate=MODEL_TRAINER_LEARNING_RATE
+    _subsample_=MODEL_TRAINER_SUBSAMPLE
+    _colsample_bytree= MODEL_TRAINER_COLSAMPLE
+    _reg_aplha=MODEL_TRAINER_REG_ALPHA
+    _reg_lambda=MODEL_TRAINER_REG_LAMBDA
+    _min_child_weight=MODEL_MIN_CHILD_WT

@@ -78,3 +78,22 @@ power_transformed_features:
 
 drop_columns:
   - ID
+
+columns_to_scale:
+  - Seniority
+  - Policies_in_force
+  - Max_policies
+  - Max_products
+  - Lapse
+  - Payment
+  - Premium
+  - Power
+  - Cylinder_capacity
+  - Value_vehicle
+  - N_doors
+  - Length
+  - Weight
+  - Age
+  - Vehicle_age
+  - Insurance_duration
+  - Licence_age

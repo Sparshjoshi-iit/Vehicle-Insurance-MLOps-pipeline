@@ -39,3 +39,18 @@ class ModelTrainerArtifact:
     metric1_artifact:ClassificationMetricArtifact
     metric2_artifact:RegressionMetricArtifact
     metric3_artifact:RegressionMetricArtifact
+    
+@dataclass
+class ModelEvaluationArtifact:
+    is_model_accepted:bool
+    changed_accuracy:float
+    trained_model1_path:str
+    trained_model2_path:str
+    trained_model3_path:str
+    
+@dataclass
+class ModelPusherArtifact:
+    saved_model_dir: str
+    model1_path: str
+    model2_path: str
+    model3_path: str

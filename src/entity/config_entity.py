@@ -58,3 +58,11 @@ class ModelTrainerConfig:
     _reg_aplha=MODEL_TRAINER_REG_ALPHA
     _reg_lambda=MODEL_TRAINER_REG_LAMBDA
     _min_child_weight=MODEL_MIN_CHILD_WT
+    
+@dataclass
+class ModelEvaluationConfig:
+    changed_threshold_score: float = MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
+    evaluation_file_name: str = "evaluation.json"
+@dataclass
+class ModelPusherConfig:
+    saved_model_dir: str

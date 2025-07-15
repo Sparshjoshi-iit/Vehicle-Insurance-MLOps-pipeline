@@ -77,7 +77,7 @@ class DataTransformation:
             df=df.drop(columns=['ID'])
             today = datetime(2020, 1, 1)
             df['Insurance_status'] = df['Date_lapse'].isna().astype(int)
-            df['Date_lapse'] = pd.to_datetime(df['Date_lapse'], errors='coerce')
+            df['Date_lapse'] = pd.to_datetime(df['Date_lapse'],dayfirst=True, errors='coerce')
             
             df['Date_lapse'] = df['Date_lapse'].fillna(today)
             df['Date_lapse'] = df['Date_lapse'].mask(df['Date_lapse'] > today, today)
@@ -85,7 +85,7 @@ class DataTransformation:
             logging.info("Clipping done for Date_lapse column")
             
             # Convert relevant date columns safely
-            df['Date_lapse'] = pd.to_datetime(df['Date_lapse'], dayfirst=True, errors='coerce')
+            df['Date_lapse'] = pd.to_datetime(df['Date_lapse'],dayfirst=True, errors='coerce')
             df['Date_start_contract'] = pd.to_datetime(df['Date_start_contract'], dayfirst=True, errors='coerce')
             df['Date_driving_licence'] = pd.to_datetime(df['Date_driving_licence'], dayfirst=True, errors='coerce')
             df['Date_last_renewal'] = pd.to_datetime(df['Date_last_renewal'], dayfirst=True, errors='coerce')

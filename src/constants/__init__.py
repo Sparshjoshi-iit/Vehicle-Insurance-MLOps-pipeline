@@ -36,7 +36,7 @@ DATA_INGESTION_COLLECTION_NAME: str = "Proj1-Data"
 DATA_INGESTION_DIR_NAME: str = "data_ingestion"
 DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store"
 DATA_INGESTION_INGESTED_DIR: str = "ingested"
-DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO: float = 0.25
+DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO: float = 0.20
 
 """
 Data Validation realted contant start with DATA_VALIDATION VAR NAME
@@ -67,6 +67,7 @@ MODEL_TRAINER_REG_ALPHA:float=1.2920225771570368
 MODEL_TRAINER_REG_LAMBDA:float=0.13266023283593514
 MODEL_MIN_CHILD_WT:int=3
 
+SAVED_MODEL_DIR = os.path.join("saved_models")
 """
 MODEL Evaluation related constants
 """

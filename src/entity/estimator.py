@@ -24,12 +24,9 @@ class MyModel:
         try:
             logging.info("Starting prediction process.")
 
-            # Step 1: Apply scaling transformations using the pre-trained preprocessing object
-            transformed_feature = self.preprocessing_object.transform(dataframe)
-
             # Step 2: Perform prediction using the trained model
             logging.info("Using the trained model to get predictions")
-            predictions = self.trained_model_object.predict(transformed_feature)
+            predictions = self.trained_model_object.predict(dataframe)
 
             return predictions
 

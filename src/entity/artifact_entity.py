@@ -19,10 +19,15 @@ class DataTransformationArtifact:
     transformed_test_file_path:str
     transformed_train_file_path2:str
     transformed_test_file_path2:str
+    transformed_train_file_path3:str
+    transformed_test_file_path3:str
+    transformed_train_file_path4:str
+    transformed_test_file_path4:str
 
 @dataclass
 class ClassificationMetricArtifact:
     f1_score:float
+    auc_score:float
     precision_score:float
     recall_score:float
 
@@ -36,9 +41,11 @@ class ModelTrainerArtifact:
     trained_model1_file_path:str
     trained_model2_file_path:str
     trained_model3_file_path:str
-    metric1_artifact:ClassificationMetricArtifact
+    trained_model4_file_path:str
+    metric1_artifact:RegressionMetricArtifact
     metric2_artifact:RegressionMetricArtifact
-    metric3_artifact:RegressionMetricArtifact
+    metric3_artifact:ClassificationMetricArtifact
+    metric4_artifact:ClassificationMetricArtifact
     
 @dataclass
 class ModelEvaluationArtifact:
@@ -47,6 +54,7 @@ class ModelEvaluationArtifact:
     trained_model1_path:str
     trained_model2_path:str
     trained_model3_path:str
+    trained_model4_path:str
     
 @dataclass
 class ModelPusherArtifact:
@@ -54,3 +62,4 @@ class ModelPusherArtifact:
     model1_path: str
     model2_path: str
     model3_path: str
+    model4_path: str

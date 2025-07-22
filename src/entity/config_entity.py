@@ -39,9 +39,22 @@ class DataTransformationConfig:
                                                     TRAIN_FILE_NAME2.replace("csv", "npy"))
     transformed_test_file_path2: str = os.path.join(data_transformation_dir, DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,
                                                    TEST_FILE_NAME2.replace("csv", "npy"))
+    transformed_train_file_path3: str = os.path.join(data_transformation_dir, DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,
+                                                    TRAIN_FILE_NAME3.replace("csv", "npy"))
+    transformed_test_file_path3: str = os.path.join(data_transformation_dir, DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,
+                                                   TEST_FILE_NAME3.replace("csv", "npy"))
+    transformed_train_file_path4: str = os.path.join(data_transformation_dir, DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,
+                                                    TRAIN_FILE_NAME4.replace("csv", "npy"))
+    transformed_test_file_path4: str = os.path.join(data_transformation_dir, DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,
+                                                   TEST_FILE_NAME4.replace("csv", "npy"))
+    
     transformed_object_file_path: str = os.path.join(data_transformation_dir,
+                                                     DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR)
+                                
+    transformed_object_file_path2: str = os.path.join(data_transformation_dir,
                                                      DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,
-                                                     PREPROCSSING_OBJECT_FILE_NAME)
+                                                     PROCESSING_OBJECT_FILE_NAME)
+    
     
 @dataclass
 class ModelTrainerConfig:
@@ -49,6 +62,7 @@ class ModelTrainerConfig:
     trained_model1_file_path: str = os.path.join(model_trainer_dir, MODEL_TRAINER_TRAINED_MODEL_DIR,'model1', MODEL_FILE_NAME)
     trained_model2_file_path: str = os.path.join(model_trainer_dir, MODEL_TRAINER_TRAINED_MODEL_DIR,'model2', MODEL_FILE_NAME)
     trained_model3_file_path: str = os.path.join(model_trainer_dir, MODEL_TRAINER_TRAINED_MODEL_DIR,'model3', MODEL_FILE_NAME)
+    trained_model4_file_path: str = os.path.join(model_trainer_dir, MODEL_TRAINER_TRAINED_MODEL_DIR,'model4', MODEL_FILE_NAME)
     model_config_file_path: str = MODEL_TRAINER_MODEL_CONFIG_FILE_PATH
     _n_estimators = MODEL_TRAINER_N_ESTIMATORS
     _max_depth = MIN_SAMPLES_SPLIT_MAX_DEPTH
@@ -61,8 +75,17 @@ class ModelTrainerConfig:
     
 @dataclass
 class ModelEvaluationConfig:
+    production_model_path1: str="saved_models/premium_model/model1.pkl"
+    production_model_path2:str= "saved_models/cost_model/model2.pkl"
+    production_model_path3: str="saved_models/propensity_model/model3.pkl"
+    production_model_path4: str="saved_models/churn_model/model4.pkl"
     changed_threshold_score: float = MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
     evaluation_file_name: str = "evaluation.json"
+   
 @dataclass
 class ModelPusherConfig:
     saved_model_dir: str
+    production_model_path1: str="saved_models/premium_model/model1.pkl"
+    production_model_path2:str= "saved_models/cost_model/model2.pkl"
+    production_model_path3: str="saved_models/propensity_model/model3.pkl"
+    production_model_path4: str="saved_models/churn_model/model4.pkl"

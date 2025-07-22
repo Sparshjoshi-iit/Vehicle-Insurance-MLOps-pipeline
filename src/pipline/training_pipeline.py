@@ -93,7 +93,7 @@ class TrainPipeline:
             model_trainer = ModelTrainer(data_transformation_artifact=data_transformation_artifact,
                                          model_trainer_config=self.model_trainer_config
                                          )
-            model_trainer_artifact = model_trainer.initiate_all_models_trainer()
+            model_trainer_artifact = model_trainer.initiate_model_trainer()
             return model_trainer_artifact
 
         except Exception as e:

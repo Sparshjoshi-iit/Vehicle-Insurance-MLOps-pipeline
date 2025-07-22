@@ -1,11 +1,11 @@
 import os
 import sys
-
+from scipy.sparse import spmatrix
 import numpy as np
 import dill
 import yaml
 from pandas import DataFrame
-
+from typing import Union
 from src.exception import MyException
 from src.logger import logging
 
@@ -31,7 +31,7 @@ def write_yaml_file(file_path: str, content: object, replace: bool = False) -> N
         raise MyException(e, sys) from e
 
 
-def load_object(file_path: str) -> object:
+def load_object(file_path: str) -> Union[spmatrix, object]:
     """
     Returns model/object from project directory.
     file_path: str location of file to load

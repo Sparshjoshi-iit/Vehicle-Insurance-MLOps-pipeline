@@ -10,12 +10,20 @@ PIPELINE_NAME: str = ""
 ARTIFACT_DIR: str = "artifact"
 
 MODEL_FILE_NAME = "model.pkl"
+MODEL_FILE_NAME2 = "model2.pkl"
+MODEL_FILE_NAME3= "model3.pkl"
+MODEL_FILE_NAME4 = "model4.pkl"
 
 TARGET_COLUMN = "Cost_claims_year"
 TARGET_COLUMN2="Premium"
+TARGET_COLUMN3="Customer_Churn"
+TARGET_COLUMN4="Claim_Propensity"
+
+
 CURRENT_YEAR = 2020
 CURRENT_DATE='2020-01-01'
 PREPROCSSING_OBJECT_FILE_NAME = "preprocessing.pkl"
+PROCESSING_OBJECT_FILE_NAME="processing.pkl"
 
 FILE_NAME: str = "data.csv"
 TRAIN_FILE_NAME: str = "train.csv"
@@ -23,6 +31,10 @@ TEST_FILE_NAME: str = "test.csv"
 SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
 TRAIN_FILE_NAME2: str = "train2.csv"
 TEST_FILE_NAME2: str = "test2.csv"
+TRAIN_FILE_NAME3: str = "train3.csv"
+TEST_FILE_NAME3: str = "test3.csv"
+TRAIN_FILE_NAME4: str = "train4.csv"
+TEST_FILE_NAME4: str = "test4.csv"
 
 AWS_ACCESS_KEY_ID_ENV_KEY = "AWS_ACCESS_KEY_ID"
 AWS_SECRET_ACCESS_KEY_ENV_KEY = "AWS_SECRET_ACCESS_KEY"
